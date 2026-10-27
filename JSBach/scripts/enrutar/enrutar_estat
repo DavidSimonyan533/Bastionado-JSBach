@@ -11,9 +11,9 @@ fnc_enrutar_estat() {
 	fi
 	
 	if iptables -t nat -C POSTROUTING -o "$ENRUTAR_WAN_INT" -j MASQUERADE 2>/dev/null; then
-   		echo "La regla MASQUERADE ya existe."
+   		echo "La regla MASQUERADE ja existix."
 	else
-   		echo "La regla MASQUERADE no existe."
+   		echo "La regla MASQUERADE no existix."
    		iptables -t nat -A POSTROUTING -o "$ENRUTAR_WAN_INT" -j MASQUERADE
 	fi
 	
